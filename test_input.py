@@ -71,6 +71,7 @@ def try1():
     # df_tx_right.to_csv(current_addr_txs_filename)
 
     global df_all_inputs
+    df1=pd.DataFrame()
     for item in current_addr_txs:
         # print("一个交易")
         # print(item)
@@ -84,7 +85,7 @@ def try1():
         global all_info_in_one_input
         result=[]
         df_all_sequence=pd.DataFrame()
-        df = pd.DataFrame()
+        df2 = pd.DataFrame()
         for item in current_addr_inputs:
             #print("inputs里的东西")
             #print(item)
@@ -94,9 +95,11 @@ def try1():
             s = pd.Series(item)
             #s.index = [0]
 
-            df = df.append(s, ignore_index=True)
-        print(df)
-
+            df2 = df2.append(s, ignore_index=True)
+        df1=df1.append(df2,ignore_index=True)
+    df1_right=df1.T
+    filename=addr+"addr_all_inpust.csv"
+    df1_right.to_csv(filename)
         #     se_an_sequen_now = pd.Series(item)
         #     all_sequence=pd.Series()
         #     df_all_squence = pd.concat([se_an_sequen_now, all_sequence], axis=1)
