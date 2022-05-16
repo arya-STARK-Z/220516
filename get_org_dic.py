@@ -4,7 +4,7 @@ import time
 import get_record
 
 
-addr="1LK8rRhBTekN3Uxh8ib83FfmvMsX6EQnqL"
+addr="1LXxZyP7CKybaXA6jELu5YJ6UQzbdZz8RP"
 
 url="https://blockchain.info/rawaddr/"+addr
 #返回一个地址的原始数据
