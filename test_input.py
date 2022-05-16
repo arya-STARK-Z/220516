@@ -98,7 +98,7 @@ def try1():
             df2 = df2.append(s, ignore_index=True)
         df1=df1.append(df2,ignore_index=True)
     df1_right=df1.T
-    filename=addr+"addr_all_inpust.csv"
+    filename=addr+"addr_all_inpust2.csv"
     df1_right.to_csv(filename)
         #     se_an_sequen_now = pd.Series(item)
         #     all_sequence=pd.Series()
